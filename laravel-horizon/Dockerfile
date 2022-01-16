@@ -285,7 +285,7 @@ fi
 ARG INSTALL_LIBREOFFICE=false
 
 RUN if [ ${INSTALL_LIBREOFFICE} = true ]; then \
-  apt-get -y update && apt-get -y install libreoffice; \
+  apk add --update --no-cache libreoffice; \
 fi
 
 #--------------------------------------------------------------------------
