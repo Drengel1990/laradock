@@ -444,6 +444,18 @@ RUN if [ ${INSTALL_MEMCACHED} = true ]; then \
   php -m | grep -r 'memcached'; \
   fi
 
+
+
+###########################################################################
+# PHP Libreoffice:
+###########################################################################
+
+ARG INSTALL_LIBREOFFICE=false
+
+RUN if [ ${INSTALL_LIBREOFFICE} = true ]; then \
+  apt-get -y update && apt-get -y install libreoffice; \
+fi
+
 ###########################################################################
 # SQL SERVER:
 ###########################################################################
